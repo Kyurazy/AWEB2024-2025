@@ -1,0 +1,45 @@
+<main class="container py-5">
+  <h2 class="text-4xl font-bold mb-4 text-center text-green-600">Employee List</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover shadow-sm rounded-lg overflow-hidden">
+      <thead class="bg-green-600 text-white">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees" class="align-middle hover:bg-green-50 hover:text-green-600 transition-all">
+          <td class="py-3 px-4">{{ employee.id }}</td>
+          <td class="py-3 px-4">{{ employee.firstname }}</td>
+          <td class="py-3 px-4">{{ employee.lastname }}</td>
+          <td class="py-3 px-4">{{ employee.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="text-4xl font-bold mt-5 mb-4 text-center text-green-600">Product List</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover shadow-sm rounded-lg overflow-hidden">
+      <thead class="bg-green-700 text-white">
+        <tr>
+          <th scope="col">Product ID</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products" class="align-middle hover:bg-green-50 hover:text-green-600 transition-all">
+          <td class="py-3 px-4">{{ product.product_id }}</td>
+          <td class="py-3 px-4">{{ product.product_name }}</td>
+          <td class="py-3 px-4">{{ product.product_description }}</td>
+          <td class="py-3 px-4">{{ product.product_price | number:'1.2-2' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
